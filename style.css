@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --default-border: 1px solid rgba(0,0,0,0.15);
+    --default-border-radius: 12px;
+}
+
+body {
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 16px;
+}
+
+.content {
+    display: grid;
+    grid-template-areas:
+    ". . . . ."
+    ". hero . form ."
+    ". hero . form ."
+    ". . . . ."
+    ;
+    gap: 70px;
+}
+
+main {
+    grid-area: form;
+}
+
+aside {
+    grid-area: hero;
+}
+
+aside h1 {
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 75px;
+}
+
+aside h1 span, main h2 span {
+    color: #fc6e51;
+}
+
+aside img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    width: 600px;
+    height: 520px;
+    border: var(--default-border);
+    padding: 44px 57px;
+    border-radius: var(--default-border-radius);
+}
+
+main h2 {
+    max-width: 430px;
+    font-size: 36px;
+    font-weight: 500px;
+}
+
+main .action {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main .actions a {
+    background-color: #ffce54;
+    height: 55px;
+    font-size: 24px;
+    border-radius: var(--default-border-radius);
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 54px;
+}
+
+main .actions a + a {
+    background-color: #fc6e51;
+    margin-top: 48px;
+}
+
+main footer p {
+    font-size: 16px;
+    margin-top: 80px;
+}
+
+main footer a {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(78, 77, 77);
+}
+
+main form {
+    margin-top: 16px;
+}
+
+main form label {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: block;
+}
+
+main form :is(input, select) {
+    height: 50px;
+    width: 490px;
+    background: white;
+    border: var(--default-border);
+    border-radius: var(--default-border-radius);
+}
